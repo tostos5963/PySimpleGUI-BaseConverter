@@ -45,8 +45,8 @@ class BaseConverter():
             bit_frame_list.append(sg.Frame("{:>2d}".format(bit), [[btn_bit], [btn_oct], [btn_hex]],
                 title_location=sg.TITLE_LOCATION_TOP, element_justification='center'))
 
-        # DEC: 数値変更イベントが必要なので Spin ではなく Input を使用
-        #      Spin → (Input, [+], [-])  (need to fire the numeric change event)
+        # DEC: テキストフィールドの変更イベントが必要なので Spin ではなく Input を使用
+        #      Spin → (Input, [+], [-])  (need to fire the text field change event)
         self.layout = [[sg.Text("DEC:"), sg.Input('', size=(7, 1), key="inp-dec-0", enable_events=True),
                         sg.Button('+', key="dec-plus"), sg.Button('-', key="dec-minus")],
                        [sg.Text("BIN:"), sg.Text('', key="disp-bin")],
