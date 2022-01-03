@@ -3,7 +3,7 @@
 PySimpleGUI を使用して作成した基底変換アプリ（16bits）です。
 10進数（DEC）、2進数（BIN）、8進数（OCT）、16進数（HEX）の変換ができます。
 
-![15puzzle](https://user-images.githubusercontent.com/15520094/147867379-827b1f37-16f6-4607-8cf2-1779e7504b3a.gif)
+![BaseConverter_img](https://user-images.githubusercontent.com/15520094/147896117-3c4c070e-8bd6-489a-9a37-1921a5a81345.gif)
 
 ダウンロード
 ------------
