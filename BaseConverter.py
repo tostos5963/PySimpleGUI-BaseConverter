@@ -112,7 +112,7 @@ class BaseConverter():
         key = "inp-dec-0"
         self.window[key].Update("{:d}".format(self.dec_value))
 
-    def onclik_bin(self, pos):
+    def onclick_bin(self, pos):
         # BIN button （0 → 1）（1 → 0）
         key = "btn-bin-{:d}".format(pos)
         if self.window[key].ButtonText == '0':
@@ -134,7 +134,7 @@ class BaseConverter():
         self.update_dec()
         self.update_hex()
 
-    def onclik_oct(self, pos):
+    def onclick_oct(self, pos):
         # OCT button 更新（0 → 1）（1 → 2）・・・（7 → 0）
         key = "btn-oct-{:d}".format(pos)
         val = (int(self.window[key].ButtonText, 8) + 1) & 7
@@ -156,7 +156,7 @@ class BaseConverter():
         self.update_dec()
         self.update_hex()
 
-    def onclik_hex(self, pos):
+    def onclick_hex(self, pos):
         # HEX button 更新（0 → 1）（1 → 2）・・・（F → 0）
         key = "btn-hex-{:d}".format(pos)
         val = (int(self.window[key].ButtonText, 16) + 1) & 0x0F
@@ -246,13 +246,13 @@ class BaseConverter():
                     self.onchange_dec(values[event])
 
                 elif base_type == 'bin':
-                    self.onclik_bin(pos)
+                    self.onclick_bin(pos)
 
                 elif base_type == 'oct':
-                    self.onclik_oct(pos)
+                    self.onclick_oct(pos)
 
                 elif base_type == 'hex':
-                    self.onclik_hex(pos)
+                    self.onclick_hex(pos)
 
         self.window.close()
 
